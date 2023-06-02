@@ -1,0 +1,35 @@
+body {
+    background: #73A5DA;
+    color: #FCFDF5;
+    padding: 10px;
+    font-family: helvetica;
+}
+#all-contents {
+    max-width: 500px;
+    margin: auto;
+}
+
+/* NAVIGATION MENU */
+nav {
+    background: #FEAD6E;
+    margin: 0 auto;
+    display: flex;
+    padding: 10px
+}
+h1 {
+    display: flex;
+    align-items: center;
+    color: #274979;
+    flex: 1;
+    margin; 0
+}
+#nav-ul {
+    list-style-image: none;
+}
+.nav-li {
+    display: inline-block;
+    padding: 0 10px;
+}
+a {
+    text-decoration: none;
+}
