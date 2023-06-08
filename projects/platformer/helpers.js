@@ -358,7 +358,7 @@ function projectileCollision() {
 }
 
 function deathOfPlayer() {
-  ctx.fillStyle = "grey";
+  ctx.fillStyle = "#FCFDF5";
   ctx.fillRect(
     canvas.width / 4,
     canvas.height / 6,
@@ -366,14 +366,14 @@ function deathOfPlayer() {
     canvas.height / 2
   );
   ctx.fillStyle = "black";
-  ctx.font = "800% serif";
+  ctx.font = "800% verdana";
   ctx.fillText(
-    "You are dead",
+    "You died!",
     canvas.width / 4,
     canvas.height / 6 + canvas.height / 5,
     (canvas.width / 16) * 14
   );
-  ctx.font = "500% serif";
+  ctx.font = "500% verdana";
   ctx.fillText(
     "Hit any key to restart",
     canvas.width / 4,
@@ -411,7 +411,7 @@ function playerFrictionAndGravity() {
 
 function drawPlatforms() {
   for (var i = 0; i < platforms.length; i++) {
-    ctx.fillStyle = "grey";
+    ctx.fillStyle = "#274979";
     ctx.fillRect(
       platforms[i].x,
       platforms[i].y,
@@ -664,6 +664,15 @@ function keyboardControlActions() {
     player.facingRight = true;
   }
   if (keyPress.space) {
+    if (player.onGround) {
+      //this only lets you jump if you are on the ground
+      player.speedY = player.speedY - playerJumpStrength;
+      jumpTimer = 19; //this counts how many frames to have the jump last.
+      player.onGround = false; //bug fix for jump animation, you have to change this or the jump animation doesn't work
+      frameIndex = 4;
+    }
+  }
+  if (keyPress.up) {
     if (player.onGround) {
       //this only lets you jump if you are on the ground
       player.speedY = player.speedY - playerJumpStrength;
