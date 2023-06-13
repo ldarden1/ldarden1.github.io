@@ -366,16 +366,16 @@ function deathOfPlayer() {
     canvas.height / 2
   );
   ctx.fillStyle = "black";
-  ctx.font = "800% verdana";
+  ctx.font = "810% verdana";
   ctx.fillText(
-    "You died!",
+    " You died!",
     canvas.width / 4,
     canvas.height / 6 + canvas.height / 5,
     (canvas.width / 16) * 14
   );
-  ctx.font = "500% verdana";
+  ctx.font = "350% verdana";
   ctx.fillText(
-    "Hit any key to restart",
+    "  Hit any key to restart",
     canvas.width / 4,
     canvas.height / 6 + canvas.height / 3,
     (canvas.width / 16) * 14
@@ -411,7 +411,7 @@ function playerFrictionAndGravity() {
 
 function drawPlatforms() {
   for (var i = 0; i < platforms.length; i++) {
-    ctx.fillStyle = "#274979";
+    ctx.fillStyle = "#36CDB3";
     ctx.fillRect(
       platforms[i].x,
       platforms[i].y,
@@ -727,3 +727,4 @@ function handleKeyUp(e) {
 function loadJson() {
   getJSON("halle.json", JsonFunction); //runs this before the setup because of timing things
 }
+

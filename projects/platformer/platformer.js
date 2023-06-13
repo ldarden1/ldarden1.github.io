@@ -63,7 +63,10 @@ $(function () {
     // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
     // example usage: createCollectable(type, x, y, gravity, bounce)
 
-  createCannon("left", 650, 1000)
+  createCollectable("lightning", 680, 40, 0, 0.5); // top
+  createCollectable("lightning", 100, 470, 0, 0.5); // underneath halle
+  createCollectable("lightning", 1100, 60, 0, 0.5); // top right
+  createCollectable("lightning", 950, 455, 0, 0.5); // inside
 
 
     // TODO 3
@@ -72,6 +75,10 @@ $(function () {
     // Your wall choices are: 'top' 'left' 'right' and 'bottom'
     // example usage: createCannon(side, position, delay, width, height)
 
+  createCannon("left", 550, 1000); // left
+  createCannon("right", 675, 1000); // down right
+  createCannon("top", 300, 1000); // up
+  createCannon("right", 300, 1000); // top right
 
 
     /////////////////////////////////////////////////
