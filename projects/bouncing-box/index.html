@@ -8,18 +8,20 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: #FEAD6E;
+			background-color: #36CDB3;
 			font-size: 300%;
 			font-family: verdana;
 			text-align: center;
 			user-select: none;
 			display: block;
 			position: absolute;
-			top: 200px;
+			top: 100px;
 			left: 00px;  /* <--- Change me! */
+			color: #274979;
 		}
 		.board{
 			height: 100vh;
+			background-color: #ffffff;
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -41,9 +43,7 @@
 			var box = jQuery('.box');	// reference to the HTML .box element
 			var board = jQuery('.board');	// reference to the HTML .board element
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
-			var colorStr;
-			var randomRGBnum = Math.random() * 255;
-
+			
 			// Every 50 milliseconds, call the update Function (see below)
 			setInterval(update, 50);
 			
@@ -86,7 +86,8 @@
 					speed = -speed
 				} 
 			};
-
+			
+			
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
 			it should increase the points total, increase the speed, and move the box to
@@ -103,6 +104,7 @@
 					speed -= 3
 				}
 			};
+			
 		
 		})();
 	</script>
